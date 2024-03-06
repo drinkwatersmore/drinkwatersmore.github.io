@@ -5,7 +5,49 @@
     <title>生日祝福</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: Arial, sans-serif;<!DOCTYPE html>
+<html>
+<head>
+    <title>日志示例</title>
+    <style>
+        #log {
+            width: 100%;
+            height: 300px;
+        }
+    </style>
+</head>
+<body>
+    <textarea id="log" readonly></textarea>
+
+    <script>
+        function log(message) {
+            const logTextArea = document.getElementById('log');
+            logTextArea.value += message + '\n';
+            logTextArea.scrollTop = logTextArea.scrollHeight;
+
+            // 发送日志信息到服务器
+            fetch('/log', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ message, timestamp: new Date() })
+            }).then(response => {
+                if (!response.ok) {
+                    throw new Error('Failed to log message');
+                }
+            }).catch(error => {
+                console.error('Error logging message:', error);
+            });
+        }
+
+        log('这是第一条日志');
+        log('这是第二条日志');
+        log('这是第三条日志');
+    </script>
+</body>
+</html>
+
             margin: 0;
             padding: 0;
             background-color: #f4f4f4;
