@@ -1,1 +1,42 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>弹出窗口示例</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+        .container {
+            margin-top: 100px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>点击按钮弹出窗口</h1>
+        <button onclick="openPopup()">弹出窗口</button>
+    </div>
+
+    <script>
+        function openPopup() {
+            window.open('popup.html', 'Popup', 'width=400,height=300');
+        }
+    </script>
+</body>
+</html>
