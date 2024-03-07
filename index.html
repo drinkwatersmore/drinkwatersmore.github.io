@@ -1,82 +1,38 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>生日祝福</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;<!DOCTYPE html>
-<html>
-<head>
-    <title>日志示例</title>
-    <style>
-        #log {
-            width: 100%;
-            height: 300px;
-        }
-    </style>
+    <title>网站索引</title>
 </head>
 <body>
-    <textarea id="log" readonly></textarea>
-
-    <script>
-        function log(message) {
-            const logTextArea = document.getElementById('log');
-            logTextArea.value += message + '\n';
-            logTextArea.scrollTop = logTextArea.scrollHeight;
-
-            // 发送日志信息到服务器
-            fetch('/log', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({ message, timestamp: new Date() })
-            }).then(response => {
-                if (!response.ok) {
-                    throw new Error('Failed to log message');
-                }
-            }).catch(error => {
-                console.error('Error logging message:', error);
-            });
-        }
-
-        log('这是第一条日志');
-        log('这是第二条日志');
-        log('这是第三条日志');
-    </script>
-</body>
-</html>
-
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            text-align: center;
-        }
-        .container {
-            margin-top: 100px;
-        }
-        button {
-            padding: 10px 20px;
-            font-size: 16px;
-            background-color: #007bff;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <h1>请领取你的生日祝福</h1>
-        <button onclick="openPopup()">领取祝福</button>
-    </div>
-
-    <script>
-        function openPopup() {
-            window.open('birthday_wishes.html', 'BirthdayWishes', 'width=400,height=300');
-        }
-    </script>
+    <header>
+        <h1>网站索引</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#section1">Section 1</a></li>
+            <li><a href="#section2">Section 2</a></li>
+            <li><a href="#section3">Section 3</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section id="section1">
+            <h2>Section 1</h2>
+            <p>This is section 1.</p>
+        </section>
+        <section id="section2">
+            <h2>Section 2</h2>
+            <p>This is section 2.</p>
+        </section>
+        <section id="section3">
+            <h2>Section 3</h2>
+            <p>This is section 3.</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Your Website</p>
+    </footer>
 </body>
 </html>
