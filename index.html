@@ -2,37 +2,69 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>网站索引</title>
+    <title>网页内容</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+        nav {
+            background-color: #f4f4f4;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            text-decoration: none;
+            color: #333;
+            margin: 0 10px;
+        }
+        section {
+            padding: 20px;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+    </style>
 </head>
 <body>
     <header>
-        <h1>网站索引</h1>
+        <h1>网页标题</h1>
     </header>
     <nav>
-        <ul>
-            <li><a href="#section1">Section 1</a></li>
-            <li><a href="#section2">Section 2</a></li>
-            <li><a href="#section3">Section 3</a></li>
-        </ul>
+        <a href="#图片">图片</a>
+        <a href="#日志">日志</a>
+        <a href="#介绍">介绍</a>
     </nav>
-    <main>
-        <section id="section1">
-            <h2>Section 1</h2>
-            <p>This is section 1.</p>
-        </section>
-        <section id="section2">
-            <h2>Section 2</h2>
-            <p>This is section 2.</p>
-        </section>
-        <section id="section3">
-            <h2>Section 3</h2>
-            <p>This is section 3.</p>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2024 Your Website</p>
-    </footer>
+    <section id="图片">
+        <div class="container">
+            <h2>图片</h2>
+            <img src="image.jpg" alt="图片描述">
+        </div>
+    </section>
+    <section id="日志">
+        <div class="container">
+            <h2>日志</h2>
+            <p>这里放置您的日志内容...</p>
+        </div>
+    </section>
+    <section id="介绍">
+        <div class="container">
+            <h2>介绍</h2>
+            <p>在这个网页上，您可以找到图片和日志。图片部分展示了我们的图片库，而日志部分记录了我们的活动日志。希望您能喜欢我们的内容！</p>
+        </div>
+    </section>
 </body>
 </html>
