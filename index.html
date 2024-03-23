@@ -1,70 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>网页内容</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-        header {
-            background-color: #333;
-            color: #fff;
-            padding: 10px;
-            text-align: center;
-        }
-        nav {
-            background-color: #f4f4f4;
-            padding: 10px;
-            text-align: center;
-        }
-        nav a {
-            text-decoration: none;
-            color: #333;
-            margin: 0 10px;
-        }
-        section {
-            padding: 20px;
-        }
-        img {
-            max-width: 100%;
-            height: auto;
-        }
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Popup</title>
+<style>
+    /* 弹窗样式 */
+    .popup {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 20px;
+        background-color: #f0f0f0;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        z-index: 9999;
+    }
+</style>
 </head>
 <body>
-    <header>
-        <h1>网页标题</h1>
-    </header>
-    <nav>
-        <a href="#图片">图片</a>
-        <a href="#日志">日志</a>
-        <a href="#介绍">介绍</a>
-    </nav>
-    <section id="图片">
-        <div class="container">
-            <h2>图片</h2>
-            <img src="image.jpg" alt="图片描述">
-        </div>
-    </section>
-    <section id="日志">
-        <div class="container">
-            <h2>日志</h2>
-            <p>这里放置您的日志内容...</p>
-        </div>
-    </section>
-    <section id="介绍">
-        <div class="container">
-            <h2>介绍</h2>
-            <p>在这个网页上，您可以找到图片和日志。图片部分展示了我们的图片库，而日志部分记录了我们的活动日志。希望您能喜欢我们的内容！</p>
-        </div>
-    </section>
+    <!-- 弹窗内容 -->
+    <div id="popup" class="popup">
+        <h2>HAPPY BIRTHDAY!</h2>
+    </div>
+
+    <script>
+        // 当页面加载完毕时显示弹窗
+        window.addEventListener('load', function() {
+            var popup = document.getElementById('popup');
+            popup.style.display = 'block';
+        });
+    </script>
 </body>
 </html>
+
