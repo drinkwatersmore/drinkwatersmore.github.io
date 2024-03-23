@@ -3,102 +3,55 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>My Page</title>
+<title>Main Page</title>
 <style>
-    /* 全局样式 */
     body {
+        font-family: Arial, sans-serif;
         margin: 0;
         padding: 0;
-        font-family: Arial, sans-serif;
-        background-image: url('your-background-image.jpg'); /* 自定义背景图片 */
-        background-size: cover;
-        background-position: center;
-        color: #fff;
+        box-sizing: border-box;
+    }
+    .container {
+        max-width: 800px;
+        margin: 50px auto;
+        padding: 20px;
+        border: 1px solid #ccc;
         text-align: center;
     }
-
-    /* 主标题样式 */
     h1 {
-        font-size: 3em;
-        margin-top: 20vh; /* 垂直居中 */
+        font-size: 36px;
+        margin-bottom: 20px;
     }
-
-    /* 小标题样式 */
     h2 {
-        font-size: 1.5em;
-        margin-top: 30px;
+        font-size: 24px;
+        margin-bottom: 10px;
     }
-
-    /* 简介样式 */
-    p {
-        font-size: 1.2em;
+    button {
+        padding: 10px 20px;
+        font-size: 18px;
         margin-top: 20px;
-    }
-
-    /* 图片样式 */
-    img {
-        max-width: 100%;
-        height: auto;
-        margin-top: 20px;
-    }
-
-    /* 弹窗样式 */
-    .popup {
-        display: none;
-        position: fixed;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        padding: 20px;
-        background-color: #f0f0f0;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        z-index: 9999;
-    }
-
-    /* 关闭按钮样式 */
-    .close-btn {
-        position: absolute;
-        top: 5px;
-        right: 5px;
         cursor: pointer;
-        color: #888;
     }
 </style>
 </head>
 <body>
-    <!-- 弹窗内容 -->
-    <div id="popup" class="popup">
-        <span class="close-btn" onclick="closePopup()">×</span>
-        <h2>HAPPY BIRTHDAY!</h2>
-    </div>
+<div class="container">
+    <h1>Main Title</h1>
+    <h2>Introduction</h2>
+    <button onclick="openIntroduction()">Open Introduction</button>
+    <h2>Image</h2>
+    <button onclick="openImage()">Open Image</button>
+</div>
 
-    <!-- 主要内容 -->
-    <h1>Welcome to My Page</h1>
-    <h2>Subtitle 1</h2>
-    <p>Introduction text goes here...</p>
-    <h2>Subtitle 2</h2>
-    <img src="your-image.jpg" alt="Image">
+<script>
+    function openIntroduction() {
+        window.open("introduction.html", "_blank", "width=400,height=300");
+    }
 
-    <script>
-        // 显示弹窗
-        function showPopup() {
-            var popup = document.getElementById('popup');
-            popup.style.display = 'block';
-        }
-
-        // 关闭弹窗
-        function closePopup() {
-            var popup = document.getElementById('popup');
-            popup.style.display = 'none';
-        }
-
-        // 当页面加载完毕时显示弹窗
-        window.addEventListener('load', function() {
-            showPopup();
-        });
-    </script>
+    function openImage() {
+        window.open("image.html", "_blank", "width=400,height=300");
+    }
+</script>
 </body>
 </html>
 
