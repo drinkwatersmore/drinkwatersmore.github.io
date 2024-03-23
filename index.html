@@ -56,11 +56,21 @@
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         z-index: 9999;
     }
+
+    /* 关闭按钮样式 */
+    .close-btn {
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        cursor: pointer;
+        color: #888;
+    }
 </style>
 </head>
 <body>
     <!-- 弹窗内容 -->
     <div id="popup" class="popup">
+        <span class="close-btn" onclick="closePopup()">×</span>
         <h2>HAPPY BIRTHDAY!</h2>
     </div>
 
@@ -72,12 +82,24 @@
     <img src="your-image.jpg" alt="Image">
 
     <script>
-        // 当页面加载完毕时显示弹窗
-        window.addEventListener('load', function() {
+        // 显示弹窗
+        function showPopup() {
             var popup = document.getElementById('popup');
             popup.style.display = 'block';
+        }
+
+        // 关闭弹窗
+        function closePopup() {
+            var popup = document.getElementById('popup');
+            popup.style.display = 'none';
+        }
+
+        // 当页面加载完毕时显示弹窗
+        window.addEventListener('load', function() {
+            showPopup();
         });
     </script>
 </body>
 </html>
+
 
