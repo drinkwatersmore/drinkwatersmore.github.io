@@ -7,7 +7,7 @@
 <style>
     body {
         background-image: url('background.png');
-            background-size: cover;
+        background-size: cover;
         font-family: Arial, sans-serif;
         margin: 0;
         padding: 0;
@@ -34,6 +34,11 @@
         margin-top: 20px;
         cursor: pointer;
     }
+    /* 添加样式设置图片大小和透明度 */
+    img {
+        width: 200px; /* 设置图片宽度为200像素 */
+        opacity: 0.7; /* 设置图片透明度为70% */
+    }
 </style>
 </head>
 <body>
@@ -43,6 +48,8 @@
     <button onclick="openIntroduction()">简介</button>
     <h2>图片</h2>
     <button onclick="openImage()">图片</button>
+    <!-- 添加图片元素 -->
+    <img src="example.jpg" alt="示例图片">
 </div>
 
 <script>
@@ -54,6 +61,9 @@
         window.open("image.html", "_blank", "width=400,height=300","_self");
     }
 </script>
+</body>
+</html>
+
 </body>
 </html>
 
